@@ -1,0 +1,20 @@
+<div class="form-group{{ $errors->has('name') ? 'has-error' : ''}}">
+    {!! Form::label('name', 'Name', ['class' => 'control-label']) !!}
+    {!! Form::text('name', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
+    {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('code') ? 'has-error' : ''}}">
+    {!! Form::label('code', 'Code', ['class' => 'control-label']) !!}
+    {!! Form::text('code', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
+    {!! $errors->first('code', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('details') ? 'has-error' : ''}}">
+    {!! Form::label('details', 'Details', ['class' => 'control-label']) !!}
+    {!! Form::text('details', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
+    {!! $errors->first('details', '<p class="help-block">:message</p>') !!}
+</div>
+
+
+<div class="form-group">
+    {!! Form::submit($formMode === 'edit' ? 'Update' : 'Create', ['class' => 'btn btn-primary']) !!}
+</div>

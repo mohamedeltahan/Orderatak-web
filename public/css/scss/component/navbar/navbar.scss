@@ -1,0 +1,154 @@
+@import "../../variables/_variable.scss";
+@import "../../mixins/_mixin.scss";
+
+
+.navbar-container{
+    height: 60px ;
+    -webkit-box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.5);
+    background-color: #FFF;
+    position: relative;
+    z-index: 9999999999999;
+    .nav-bar{
+        box-sizing: border-box;
+        padding: 15px;
+        overflow: hidden;
+        height: 100%;
+        .user-list{
+            float: $left;
+            list-style: none;
+            li {
+                cursor: pointer;
+                float: $left;
+                margin-right: 20px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                @include prefix(border-radius , 100% , webkit moz o ms);
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .user-nav-list{
+        width: 250px;
+        overflow: hidden;
+        background: #FFF;
+        position: absolute;
+        left: 20px;
+        display: none;
+        border-bottom: solid 4px $main-color;
+        @include prefix(transition , .3s , webkit moz o ms);
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        @include prefix(border-bottom-left-radius , 5px , webkit moz o ms);
+        @include prefix(border-bottom-right-radius , 5px , webkit moz o ms);
+        ul{
+            margin: 0px;
+            list-style: none;
+            li{
+                cursor: pointer;
+                padding: 15px;
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: 12px;
+                text-align: $right;
+                :last-child{
+                    border: 0 !important;
+                }
+                &:hover{
+                    background-color: rgb(246, 246, 246);
+                }
+                i{
+                    float: $left;
+                    line-height: 18px;
+                }
+                a{
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
+    .user-notification-list{
+        width: 400px;
+        height: 250px;
+        overflow: hidden;
+        background: #FFF;
+        position: absolute;
+        left: 20px;
+        border-bottom: solid 4px $main-color;
+        @include prefix(transition , .3s , webkit moz o ms);
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        @include prefix(border-bottom-left-radius , 5px , webkit moz o ms);
+        @include prefix(border-bottom-right-radius , 5px , webkit moz o ms);
+        display: none;
+        .notification-list{
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            .noti{
+                height: 110px;
+                overflow: hidden;
+                //border-bottom: solid 1px gray;
+                font-size: 12px;
+                padding: 15px 20px 5px;
+                cursor: pointer;
+                
+                &:hover{
+                    background-color: rgb(246, 246, 246); 
+                    border-right: solid 4px $main-color;
+                }
+                ul{  
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    height: 100%;
+                    .noti-img{
+                        width: 50px;
+                        height: 100%;
+                        float: $right;
+                        text-align: center;
+                        img{
+                            width: 80%;
+                            @include prefix(border-radius , 100% , webkit moz o ms );                        }
+                    }
+                    li{
+                        display: inline-block;
+                    }
+                    .noti-description{
+                        width: calc(100% - 50px);
+                        float: $right;
+                        text-align: $right;
+                        span{
+                            float: $left;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .noti-footer{
+        width: 100%;
+        height: 30px;
+        background-color: rgb(195, 195, 195);
+        text-align: center;
+        font-size: 12px;
+        line-height: 26px;
+        a{
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+    .slide{
+        display: block;
+    }
+}

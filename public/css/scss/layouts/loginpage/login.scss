@@ -1,0 +1,102 @@
+@import "../../variables/_variable.scss";
+@import "../../mixins/_mixin.scss";
+
+body{
+    background-color: #152733;
+}
+.login-container-fluid{
+    @media screen and (max-width:400px){
+        width: 100%;
+    }
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform , translate(-50% , -50%), webkit moz o ms);
+    .login-form-container{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        .logo{
+            text-align: center;
+        }
+        .disc{
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 24px;
+        }
+        .login-form{
+            form{
+                @media screen and (max-width:400px){
+                    text-align: center;
+                }
+                a{
+                    color: #fff;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 14px;
+                    margin-left: 22px;
+                    @include prefix(transition , .5s, webkit moz o ms);
+                    &:hover{
+                        color: rgb(46, 104, 212);
+                        @include prefix(transition , .5s, webkit moz o ms);
+                    }
+                    @media screen and (max-width:400px){
+                        margin: 0;
+                    }
+                }
+                position: relative;
+                span{
+                    position: absolute;
+                    left: 79px;
+                    color: #000;
+                    @include prefix(transition , .5s, webkit moz o ms);
+                    @media screen and (max-width:400px){
+                        left: 18vw;
+                    }
+                }
+                .user{
+                    top: 10px;
+                }
+                .pass{
+                    top: 105px;
+                }
+                input{
+                    padding: 10px 40px;
+                    display: block;
+                    width: 270px;
+                    margin: 0px auto 50px ;
+                    border: 0;
+                    @include prefix(border-radius , 8px , webkit mo o ms);
+                    @include prefix(transition , .5s, webkit moz o ms);
+                }
+                button{
+                    padding: 10px;
+                    margin: auto;
+                    border: 0;
+                    background-color: rgb(46, 104, 212);
+                    color: #FFF;
+                    font-weight: bold;
+                    width: 120px;
+                    margin-left: 68px;
+                    @include prefix(border-radius , 5px , webkit moz o ms);
+                    @include prefix(transition , .5s, webkit moz o ms);
+                    &:hover{
+                        @include prefix(transition , .5s, webkit moz o ms);
+                        background-color: rgb(28, 76, 165);
+                    }
+                    @media screen and (max-width:400px){
+                        display: block;
+                        margin: auto;
+                        width: 150px;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

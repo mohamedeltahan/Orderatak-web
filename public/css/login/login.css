@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background-color: #152733;
+}
+
+.login-container-fluid {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 400px) {
+  .login-container-fluid {
+    width: 100%;
+  }
+}
+.login-container-fluid .login-form-container {
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+}
+.login-container-fluid .login-form-container .logo {
+  text-align: center;
+}
+.login-container-fluid .login-form-container .disc {
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+.login-container-fluid .login-form-container .login-form form {
+  position: relative;
+}
+@media screen and (max-width: 400px) {
+  .login-container-fluid .login-form-container .login-form form {
+    text-align: center;
+  }
+}
+.login-container-fluid .login-form-container .login-form form a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 22px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+.login-container-fluid .login-form-container .login-form form a:hover {
+  color: #2e68d4;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 400px) {
+  .login-container-fluid .login-form-container .login-form form a {
+    margin: 0;
+  }
+}
+.login-container-fluid .login-form-container .login-form form span {
+  position: absolute;
+  left: 79px;
+  color: #000;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 400px) {
+  .login-container-fluid .login-form-container .login-form form span {
+    left: 18vw;
+  }
+}
+.login-container-fluid .login-form-container .login-form form .user {
+  top: 10px;
+}
+.login-container-fluid .login-form-container .login-form form .pass {
+  top: 105px;
+}
+.login-container-fluid .login-form-container .login-form form input {
+  padding: 10px 40px;
+  display: block;
+  width: 270px;
+  margin: 0px auto 50px;
+  border: 0;
+  -webkit-border-radius: 8px;
+  -mo-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+.login-container-fluid .login-form-container .login-form form button {
+  padding: 10px;
+  margin: auto;
+  border: 0;
+  background-color: #2e68d4;
+  color: #FFF;
+  font-weight: bold;
+  width: 120px;
+  margin-left: 68px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+.login-container-fluid .login-form-container .login-form form button:hover {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #1c4ca5;
+}
+@media screen and (max-width: 400px) {
+  .login-container-fluid .login-form-container .login-form form button {
+    display: block;
+    margin: auto;
+    width: 150px;
+    margin-bottom: 25px;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

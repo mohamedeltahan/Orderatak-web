@@ -1,0 +1,6 @@
+@mixin prefix ($name, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        #{'-'+$prefix+'-'+$name}: $value;
+    }
+    #{$name}:$value;
+}

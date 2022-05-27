@@ -1,0 +1,791 @@
+@import "../../component/_menu.scss";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+  body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+  }
+  
+  .co-1 {
+    width: 8.3333333333%;
+  }
+  
+  .co-2 {
+    width: 16.6666666667%;
+  }
+  
+  .co-3 {
+    width: 25%;
+  }
+  
+  .co-4 {
+    width: 33.3333333333%;
+  }
+  
+  .co-5 {
+    width: 41.6666666667%;
+  }
+  
+  .co-6 {
+    width: 50%;
+  }
+  
+  .co-7 {
+    width: 58.3333333333%;
+  }
+  
+  .co-8 {
+    width: 66.6666666667%;
+  }
+  
+  .co-9 {
+    width: 75%;
+  }
+  
+  .co-10 {
+    width: 83.3333333333%;
+  }
+  
+  .co-11 {
+    width: 91.6666666667%;
+  }
+  
+  .co-12 {
+    width: 100%;
+  }
+  
+  html,
+  body {
+    background-color: #eeeeee;
+  }
+  
+  .homepagecontainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
+    .navtopcontainer {
+        width: 100%;
+        height: 50px;
+        background-color: $main-color;
+        padding: 0px 25px;
+        line-height: 50px;
+        .navtop {
+            height: 50px;
+            width: 100%;
+            h1 {
+                @media screen and (max-width: 768px) {
+                    font-size: 28px;
+                }
+                color: #fff;
+                text-transform: capitalize;
+                margin: 0px;
+                padding: 0px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+
+
+/*=========================================================*/
+
+
+/* categories style */
+
+.categoriescontainer {
+    width: 100%;
+    height: 140px;
+    padding: 0px 25px;
+    .categories {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        .category {
+            height: 100px;
+            background-color: $main-color;
+            float: left;
+            text-align: center;
+            @media screen and (min-width: 992px) {
+                padding-top: 26px;
+            }
+            @media screen and (min-width: 1200px) {
+                line-height: 100px;
+                padding-top: 0px;
+            }
+            text-transform: capitalize;
+            color: #fff;
+            @include prefix (border-radius, 10px, webkit moz o ms);
+            @include prefix (transition, .5s, webkit moz o ms);
+            @include prefix (box-shadow, 0px 0px 4px 0px rgba(0, 0, 0, 0.6), webkit moz o ms);
+            cursor: pointer;
+            &:hover {
+                @include prefix (box-shadow, 0px 0px 2px 0px rgba(0, 0, 0, 0.6), webkit moz o ms);
+                @include prefix (transition, .5s, webkit moz o ms);
+                background-color: #FFF;
+                color: $main-color;
+            }
+            span {
+                @media screen and (min-width: 992px) {
+                    font-size: 16px;
+                    display: block;
+                }
+                @media screen and (min-width: 1200px) {
+                    font-size: 18px;
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+.categoryclick {
+    @include prefix (box-shadow, 0px 0px 2px 0px rgba(0, 0, 0, 0.6), webkit moz o ms);
+    @include prefix (transition, .5s, webkit moz o ms);
+    background-color: #FFF !important;
+    color: $main-color !important;
+}
+
+
+/*End categories style */
+
+
+/*=========================================================*/
+
+.settingcontainer {
+    width: 100%;
+    height: 100%;
+    padding: 0px 25px;
+    padding-top: 25px;
+    .foodcategoriescontainer {
+        height: 100%;
+        background-color: #eeeeee;
+        display: flex;
+        @media only screen and (max-width: 1200px) {
+            width: (3*100%)/12;
+        }
+        .foodcategories {
+            margin: 50px auto;
+            ul {
+                list-style: none;
+                width: 100%;
+                display:flex;
+                justify-content: space-between;
+                li {
+                    width: 125px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #FFF;
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    overflow: hidden;
+                    display: inline-block;
+                    text-align: center;
+                    @include prefix(transition, .5s, webkit moz o ms);
+                    @include prefix(border-radius, 10px, webkit moz o ms);
+                    &:hover {
+                        background-color: $main-color;
+                        color: #FFF;
+                        @include prefix(transition, .5s, webkit moz o ms);
+                    }
+                }
+            }
+        }
+    }
+    .foodcategorieslistclick {
+        @include prefix(transition, .5s, webkit moz o ms);
+        background-color: $main-color !important;
+        color: #FFF;
+        cursor: auto !important;
+    }
+    .itemscontainer {
+        @media only screen and (max-width: 1200px) {
+            width: (9*100%)/12;
+        }
+        height: 100%;
+        background-color: #FFF;
+        float: left;
+        padding-top: 50px;
+        @include prefix(border-radius, 10px, webkit moz o ms);
+        .search {
+            width: 100%;
+            margin-bottom: 20px;
+            input {
+                width: 70%;
+                height: 50px;
+                padding: 10px;
+                border: 0;
+                margin-left: 15%;
+                border-bottom: solid 1px $main-color;
+                @include prefix(border-radius, 4px, webkit moz o ms);
+                margin-bottom: 15px;
+            }
+        }
+        .productcategories {
+            width: 100%;
+            height: 500px;
+            padding: 15px 0px 50px 90px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+            @media only screen and (max-width: 1200px) {
+                padding: 15px 0px 50px 9%;
+            }
+            @media only screen and (max-width: 1090px) {
+                padding: 15px 0px 50px 5%;
+            }
+            @media only screen and (max-width: 1006px) {
+                padding: 15px 0px 50px 3.5%;
+            }
+            .product {
+                height: 150px;
+                float: left;
+                margin-right: 15px;
+                margin-top: 15px;
+                background-color: #FFF;
+                @include prefix(border-radius, 8px, webkit moz o ms);
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+                @include prefix (transition, .5s, webkit moz o ms);
+                @include prefix (box-shadow, 0px 0px 4px 0px rgba(0, 0, 0, 0.6), webkit moz o ms);
+                @media only screen and (max-width: 1200px) {
+                    width: 150px;
+                    height: 150px;
+                    margin-right: 20px;
+                }
+                &:hover {
+                    background-color: $main-color;
+                    color: #FFF;
+                    .overlay {
+                        opacity: 1;
+                        @include prefix (transition, .5s, webkit moz o ms);
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100px;
+                }
+                .productinfo {
+                    width: 100%;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 20px;
+                    span {
+                        font-weight: bold;
+                        font-size: 16px;
+                        text-transform: capitalize;
+                    }
+                }
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    background-color: $main-color;
+                    position: absolute;
+                    color: #FFF;
+                    text-align: center;
+                    line-height: 150px;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    @include prefix (transition, .5s, webkit moz o ms);
+                }
+            }
+        }
+    }
+    .overlayselected {
+        opacity: 1;
+        @include prefix (transition, .5s, webkit moz o ms);
+    }
+    .setting {
+        height: 100%;
+        float: $right;
+        padding: 0px 25px;
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .clientinfocontainer {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            padding: 0px 25px;
+            padding-top: 25px;
+            @include prefix(border-radius, 10px, webkit moz o ms);
+            .clientinfo {
+                width: 100%;
+                height: 80px;
+                position: relative;
+                label {
+                    text-transform: capitalize;
+                    color: #000;
+                }
+                input[type=number]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                input {
+                    border: 0;
+                    border-bottom: solid 1px $main-color;
+                    @include prefix(border-radius, 4px, webkit moz o ms);
+                    padding: 4px;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                    width: 48%;
+                    float: left;
+                    margin-left: 4%;
+                    text-align:$right;
+                }
+                .deff {
+                    width: 100%;
+                    margin-left: 0px !important;
+                }
+                .defv {
+                    margin-left: 0px !important;
+                }
+                .expectedlist {
+                    width: 100%;
+                    height: 300px;
+                    position: absolute;
+                    top: 30px;
+                    left: 0px;
+                    overflow-y: scroll;
+                    background-color: #FFF;
+                    border-left: solid 4px $main-color;
+                    display: none;
+                    &::-webkit-scrollbar {
+                        width: 2px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                    }
+                    &:hover {
+                        &::-webkit-scrollbar-thumb {
+                            background: #888;
+                        }
+                    }
+                    @include prefix (box-shadow, 0px 0px 4px 0px rgba(0, 0, 0, 0.6), webkit moz o ms);
+                    @include prefix(border-radius, 4px, webkit moz o ms);
+                    ul {
+                        list-style: none;
+                        li {
+                            width: 100%;
+                            height: 60px;
+                            background-color: #FFF;
+                            text-align: right;
+                            cursor: pointer;
+                            padding: 5px 15px 0px 0px;
+                            @include prefix (transition, .5s, webkit moz o ms);
+                            &:hover {
+                                background-color: $main-color;
+                                @include prefix (transition, .5s, webkit moz o ms);
+                            }
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .orderinfo {
+                width: 100%;
+                margin-bottom: 25px;
+                label {
+                    text-transform: capitalize;
+                    margin-right: 5px;
+                }
+                select {
+                    border: 0;
+                    height: 40px;
+                    border: solid 1px $main-color;
+                    @include prefix(border-radius, 5px, webkit moz o ms);
+                }
+                .selected {
+                    border: 0;
+                    height: 40px;
+                    line-height: 40px;
+                    margin: auto;
+                    margin-right: 10px;
+                    border: solid 1px $main-color;
+                    @include prefix(border-radius, 5px, webkit moz o ms);
+                }
+            }
+            .orderscontainer {
+                width: 100%;
+                height: 225px;
+                overflow-y: scroll;
+                margin-bottom: 25px;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                .order {
+                    width: 100%;
+                    height: 50px;
+                    border: solid 1px #cfcfcf;
+                    margin-bottom: 5px;
+                    @include prefix(border-radius, 5px, webkit moz o ms);
+                    .number {
+                        height: 50px;
+                        border-right: solid 1px #cfcfcf;
+                        text-align: center;
+                        line-height: 50px;
+                        float: left;
+                        font-size: 14px;
+                    }
+                    .name {
+                        height: 50px;
+                        line-height: 50px;
+                        border-right: solid 1px #cfcfcf;
+                        text-align: center;
+                        float: left;
+                        span {
+                            font-size: 14px;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .countity {
+                        height: 50px;
+                        float: left;
+                        text-align: center;
+                        line-height: 50px;
+                        border-right: solid 1px #cfcfcf;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px 5px;
+                        input {
+                            margin: 0px 3px 0px 3px;
+                            width: 30px;
+                            height: 25px;
+                            text-align: center;
+                            margin-top: 12.5px;
+                        }
+                        button {
+                            cursor: pointer;
+                            width: 1vw;
+                            font-size: 1vw;
+                            border: 0;
+                            background: none;
+                            outline: 0;
+                        }
+                    }
+                    .price {
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        border-right: solid 1px #cfcfcf;
+                        float: left;
+                    }
+                    .delete {
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        float: left;
+                        i {
+                            cursor: pointer;
+                            font-size: 1vw;
+                        }
+                    }
+                }
+            }
+            .receipt {
+                width: 100%;
+                height: 150px;
+                text-transform: capitalize;
+                .line {
+                    width: 100%;
+                    display: block;
+                    overflow: hidden;
+                    button {
+                        width: 120px;
+                        height: 40px;
+                        background-color: $main-color;
+                        border: 0;
+                        color: #fff;
+                        text-transform: capitalize;
+                        @include prefix(border-radius, 5px, webkit moz o ms);
+                        float: right;
+                        @include prefix(transition, .5s, webkit moz o ms);
+                        &:hover {
+                            @include prefix(transition, .5s, webkit moz o ms);
+                            background: none;
+                            border: solid 1px $main-color;
+                            color: #000;
+                        }
+                    }
+                }
+                .span1 {
+                    float: left;
+                }
+                .span2 {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+
+/*offer div style*/
+
+.offer {
+    width: 50%;
+    height: 50px;
+    background-color: #f00;
+    position: absolute;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-right-radius: 50px;
+    font-size: 12px;
+    @include prefix ( transform, rotate(-12deg) translate(-11px, -8px), webkit moz ms o);
+    div {
+        @include prefix ( transform, rotate(-33deg) translate(-5px, 4px), webkit moz ms o);
+    }
+}
+
+
+/*add item popup style*/
+
+
+/*================================================*/
+
+.additempopupcontainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .closepopup {
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+    input {
+        height: 40px;
+        border: 0;
+        border-bottom: solid 1px $main-color;
+        padding-left: 10px;
+        text-transform: capitalize;
+    }
+    .additempopupformcontainer {
+        width: 60%;
+        height: 450px;
+        background-color: #FFF;
+        position: relative;
+        margin-top: 10%;
+        @include prefix(border-radius, 20px, webkit moz o ms);
+        padding: 50px;
+        text-transform: capitalize;
+        .additempopupform {
+            width: 100%;
+            height: 100%;
+            background-color: #FFF;
+            @include prefix(border-radius, 10px, webkit moz o ms);
+        }
+        .choicecategory {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            label {
+                width: 10%;
+            }
+            select {
+                width: 80%;
+                height: 50px;
+                border: solid 1px $main-color;
+                @include prefix(border-radius, 5px, webkit moz o ms);
+                text-transform: capitalize;
+                padding-left: 10px;
+            }
+        }
+        .itemname {
+            width: 100%;
+            height: 145px;
+            line-height: 50px;
+            overflow: hidden;
+            margin-top: 15px;
+            input {
+                width: 100%;
+            }
+            textarea {
+                width: 100%;
+                padding: 15px 10px 0px 10px;
+                margin-top: 30px;
+                border: solid 1px $main-color;
+            }
+        }
+        .itemprice {
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            line-height: 50px;
+            input {
+                width: 18%;
+                margin-right: 2%;
+            }
+            select {
+                width: 58.9%;
+                height: 50px;
+                border: solid 1px $main-color;
+                padding-left: 10px;
+                @include prefix(border-radius, 5px, webkit moz o ms);
+                text-transform: capitalize;
+                box-sizing: border-box;
+            }
+        }
+        .itemphoto {
+            width: 100%;
+            height: 50px;
+            margin-top: 50px;
+            input {
+                height: 40px;
+                line-height: 30px;
+                padding: 0;
+            }
+            button {
+                width: 120px;
+                height: 40px;
+                padding: 0px 10px;
+                text-transform: capitalize;
+                background-color: $main-color;
+                border: 0;
+                color: #FFF;
+                cursor: pointer;
+                i {
+                    float: right;
+                }
+            }
+            .btn-add {
+                float: right;
+            }
+        }
+    }
+}
+
+
+/*===============*/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/*casher pop up container*/
+
+.casherpopupcontainer {
+    @extend .additempopupcontainer;
+    .casherpopupcontainer {
+        @extend .additempopupformcontainer;
+        width: 35% !important;
+        height: 70% !important;
+        margin-top: 7%;
+    }
+    .casherinfo {
+        width: 100%;
+        height: 100%;
+        .casherpic {
+            width: 250px;
+            height: 250px;
+            @include prefix(border-radius, 100%, webkit moz o ms);
+            background-color: $main-color;
+            margin: auto;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .cashername {
+            width: 100%;
+            height: 100px;
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 28px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .logout {
+            width: 100%;
+            text-align: center;
+            a {
+                color: #000;
+                text-decoration: none;
+                @include prefix(transition, .5s, webkit moz o ms);
+                &:hover {
+                    color: #f00;
+                    @include prefix(transition, .5s, webkit moz o ms);
+                }
+            }
+        }
+    }
+}
+
+
+/*alert page style*/
+
+.alertpage {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 800;
+    @media screen and (max-width: 991px) {
+        display: block;
+        font-size: 20px;
+        padding: 100px 15px;
+        i {
+            font-size: 120px !important;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 44px;
+        }
+        span {
+            font-weight: 400;
+            font-size: 28px;
+        }
+    }
+}
+
+
+/*class showlist to show expected list when i focus on input => number*/
+
+.showlist {
+    display: block !important;
+}

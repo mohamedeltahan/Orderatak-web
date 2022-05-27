@@ -1,0 +1,45 @@
+@import "../../variables/_variable.scss";
+@import "../../mixins/_mixin.scss";
+
+.alert-popup-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.3);
+    z-index: 99999999999999;
+    display: none;
+    .alert-popup{
+        width: 500px;
+        height: 150px;
+        background-color: #FFF;
+        @include prefix(border-radius , 10px , webkit moz o ms);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform , translate(-50% , -50%) , webkit moz o ms);
+        .alert-massage{
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            text-align: $right;
+        }
+        .alert-action{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            button{
+                width: 120px;
+                padding: 6px;
+                border: 0;
+                background-color: $main-color;
+                color: #FFF;
+            }
+        }
+
+    }
+}
+.show{
+    display: block;
+}

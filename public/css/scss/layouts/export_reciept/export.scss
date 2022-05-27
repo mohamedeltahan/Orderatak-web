@@ -1,0 +1,249 @@
+@import "../../component/_menu.scss";
+
+
+.setting {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    margin-top: 25px;
+    margin: auto;
+    //@include prefix(transform, translate(-50%, -50%), webkit moz o ms);
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .traderinfocontainer {
+        width: 100%;
+        background: #FFF;
+        padding: 25px;
+        display: inline-block;
+        @include prefix(border-radius, 10px, webkit moz o ms);
+        .reciept-form{
+            width: 100%;
+            text-align: $right;
+            position: relative;
+            .margin{
+                margin-right: 40px;
+            }
+            #searchbox{
+                overflow: hidden;
+                button{
+                    display: none;
+                }
+                .label{
+                    position: relative;
+                    width: calc((100% / 3) - 25px);
+                    margin-bottom: 20px;
+                    float: right;
+                    overflow: hidden;
+                    margin-left: 25px;
+                }
+                input{
+                    text-align: right;
+                    height: 40px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 5px 120px 5px 0px;
+                    border: solid 1px ;
+                }
+                label{
+                    background-color: gray;
+                    line-height: 40px;
+                    position: absolute;
+                    color: #FFF;
+                    right: 0;
+                    padding:0px 8px;
+                }
+            }
+            input[type=number]::-webkit-inner-spin-button {
+                display: none;
+            }
+            .reciepts-item{
+                width: 100%;
+                margin-top: 50px;
+                    .item{
+                        width: 100%;
+                        padding: 0;
+                        color: #000;
+                        height: 80px;
+                        border: solid 1px #222;
+                    }
+                form{
+                    overflow: hidden;
+                    div{
+                        display: inline-block;
+                        white-space: nowrap;
+                        outline: 0;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        overflow: hidden;
+                        input{
+                            margin: 0;
+                            border: 0;
+                            text-align: center;
+                            background: none;
+                            color: #000;
+                        }                     
+                    }
+                    button{
+                        display: none;
+                    } 
+                    .item-remove{
+                        cursor: pointer;
+                    }
+                    input{
+                        //border: 0;
+                        white-space: nowrap;
+                        width: 70%;
+                    }
+                    .item{
+                        margin-bottom: 50px;
+                        overflow: hidden;
+                        @include prefix(border-radius , 15px , webkit moz o ms);
+                        div+div{
+                            border-left: solid 1px #000;
+                        }
+                    }
+                    span , i{
+                        line-height: 80px;
+                    }
+                    i{
+                        cursor: pointer;
+                    }
+                }
+                .add-item{
+                    border: 0;
+                    background-color: $main-color;
+                    display: block;
+                    color: #fff;
+                    padding: 12px;
+                    width: 120px;
+                    float: $right;
+                    position: relative;
+                    z-index: 99999999;
+                    overflow: hidden;
+                }
+                .submit-item{
+                    @extend .add-item ;
+                    float: left;
+                }   
+            }
+        }
+    }
+    .header{
+        width: 100%;
+        height:100px;
+        background: #FFF;
+        padding:0px 25px;
+        @include prefix(border-radius, 10px, webkit moz o ms);
+        margin-bottom: 50px;
+        text-align: $right;
+        overflow: hidden;
+        h4{
+            line-height:100px ;
+            display: inline-block;
+        }   
+        i{
+            color: $main-color;
+            font-size: 28px;
+            margin-left: 25px;
+            line-height: 100px;
+        }
+    }
+}
+select{
+    border: 0;
+    color: #000;
+    width: 70%;
+    text-align: center ;
+}
+
+/*add ex ports opoup container style*/
+
+.add-exports-pop-up-container {
+    width: 100%;
+    z-index: 10000;
+    //padding-top: 50%;
+    display: block;
+}
+
+#sumbitreciepts {
+    margin-top: 70px;
+}
+
+#add {
+    margin-top: 70px;
+}
+
+/*hidden form style*/
+#hidden-form{
+    display: none;
+}
+
+
+.expectedlist  {
+    width: 25%;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    overflow-y: scroll;
+    background-color: #FFF;
+    border-left: solid 4px $main-color;
+    display: none;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+    -ms-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    float: right;
+    z-index: 99999999999999999;
+  }
+.product{
+    top: 50px;
+    left: 20px;
+}
+ .expectedlist::-webkit-scrollbar {
+    width: 2px;
+  }
+  .expectedlist::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+   .expectedlist:hover::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+   .expectedlist ul {
+    list-style: none;
+  }
+   .expectedlist ul li {
+    width: 100%;
+    height: 60px;
+    background-color: #FFF;
+    text-align: right;
+    cursor: pointer;
+    padding: 5px 15px 0px 0px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+  }
+   .expectedlist ul li:hover {
+    background-color: $main-color;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+    color: #FFF;
+  }
+   .expectedlist ul li span {
+    display: block;
+  }

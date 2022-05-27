@@ -1,0 +1,265 @@
+@import "../../component/_menu.scss";
+
+.exporters-main-container{
+    margin-top: 100px;
+    .exporters-container{
+        .search-container{
+            direction: rtl;
+            margin-bottom: 100px;
+            button{
+                width: 120px;
+                border: 0;
+                background: $main-color;
+                color: #FFF;
+                float: $right;
+                height: 46px;
+                @include prefix(border-radius , 5px , webkit moz o ms);    
+            }
+            form{
+                text-align: center;
+                button{
+                    float: none;
+                }
+                input{
+                    width: 60%;
+                    padding:10px;
+                    border: solid 1px $main-color;
+                }
+            }
+        }
+    }
+    .exporters{
+        width:100%;
+        direction: rtl;
+        .exporters-header{
+            margin-bottom: 50px;
+            display: flow-root;
+            background: #222;
+            color: #FFF;
+            padding: 20px;
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            @include prefix(border-radius , 5px , webkit moz o ms);
+            ul{
+                list-style: none;
+                li{
+                    display: inline-block;
+                    text-align: center;
+                    float: $right;
+                    i{
+                        cursor: pointer;
+                    }
+                    position: relative;
+                    input{
+                        height: 40px;
+                        position: absolute;
+                        right: 25px;
+                        top: 20px;
+                        width: 80%;
+                        padding: 0px 10px;
+                        display: none;
+                    }
+                }
+            }
+        }
+        .exporter{
+            @extend .exporters-header;
+            background: #FFF;
+            height: 80px;
+            line-height: 80px;
+            padding: 0;
+            color: #000;
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            @include prefix(border-radius , 5px , webkit moz o ms);
+            a{
+                text-decoration: none;
+            }
+            .pen , .checked{
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 34px;
+            }
+            .remove{
+                i{
+                    display: inline-block;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+            }
+            .reciepts{
+                @extend .remove;
+            }
+            li{
+                &:hover{
+                    .pen{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-popup-container{
+    width: 0vw;
+    height: 0vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    @include prefix(transform , translate(-50% , -50%) , webkit moz o ms);
+    background-color: rgba(0, 0, 0 , .8);
+    z-index: 999999999999999;
+    overflow: hidden;
+    @include prefix(transition , .3s , webkit moz o ms);
+    .add-popup{
+        width: 60%;
+        padding: 30px;
+        background-color: #FFF;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform , translate(-50% , -50%) , webkit moz o ms);
+        @include prefix(border-radius , 10px , webkit moz o ms);
+        .title{
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0px 25px;
+        }
+        .add-number{
+            color: $main-color;
+            text-align: $right;
+            cursor: pointer;
+            i{
+                font-size: 12px;
+            }
+        }
+        .input-group{
+            input{
+                justify-items: $right;
+                text-align: $right;
+                direction: rtl;
+            }
+        }
+        .form-action{
+            margin-top: 25px;
+            button{
+                border: 0;
+                padding: 10px;
+                background-color: $main-color;
+                color: #FFF;
+                width: 120px;
+            }
+            :last-child{
+                float: $right;
+            }
+        }
+    }
+}
+.close-popup{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFF;
+    cursor: pointer;
+}
+.alert{
+    display: none;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+/*status popup style*/
+.status-popup-container{
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    opacity: 0;
+    overflow: hidden !important;
+    background: rgba(0, 0, 0 , .5);
+    z-index: 99999999999999999;
+    @include prefix(transform , translate(-50% , -50%) , webkit moz o ms);
+    @include prefix(transition , .3s , webkit moz o ms);
+    .status-popup{
+        width: 80%;
+        height:70%;
+        background-color: #FFF;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform , translate(-50% , -50%) , webkit moz o ms);
+        text-align: center;
+        padding: 50px 0px;
+        @include prefix(border-radius , 10px , webkit moz o ms);
+        span{
+            font-weight: bold;
+            font-size: 28px;
+        }
+        table{
+            width: 90%;
+            margin: 0px auto;
+            tr{
+                text-align: center;
+                direction: rtl;
+                height: 40px;
+                td{
+                    font-weight: bold;
+                    border:solid 1px #000 ;
+                }
+                .pay{
+                    cursor: pointer;
+                    color: $main-color;
+                    position: relative;
+                    input{
+                        position: absolute;
+                        right: 10px;
+                        top: 6px;
+                        padding: 4px 10px;
+                        display: none;
+                    }
+                    .checked{
+                        @extend input;
+                        padding: 0;
+                        left: 12px;
+                        right: auto;
+                        top: 17px;
+                    }
+                }
+
+            }
+            .first-row{
+                background-color: #222;
+                color: #FFF;
+            }
+        }
+    }
+}
+.table{
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 0;   
+    }
+    margin: 50px 0px;
+}
+.open-popup{
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    @include prefix(transition , .5s , webkit moz o ms);
+}
